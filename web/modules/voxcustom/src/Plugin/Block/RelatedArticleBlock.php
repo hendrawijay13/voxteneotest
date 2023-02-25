@@ -5,6 +5,8 @@ namespace Drupal\voxcustom\Plugin\Block;
 use Drupal\Core\Block\BlockBase;
 use Drupal\node\Entity\Node;
 use Drupal\file\Entity\File;
+use Drupal\Core\Url;
+
 
 /**
  * Provides a 'Related Article Block' Block.
@@ -89,7 +91,9 @@ class RelatedArticleBlock extends BlockBase {
 			
 			$items[$key]['nid'] = $nid;
 			$items[$key]['title'] = $title;
-			$items[$key]['node_link'] = \Drupal::service('path_alias.manager')->getAliasByPath('/node/'.$nid);
+
+			$base_path = Url::fromRoute('<front>', [], ['absolute' => TRUE])->toString();
+			$items[$key]['node_link'] = $base_path . 'node/' . $nid;
 		}
 
 	    return [

@@ -5,6 +5,8 @@ namespace Drupal\voxcustom\Plugin\Block;
 use Drupal\Core\Block\BlockBase;
 use Drupal\node\Entity\Node;
 use Drupal\file\Entity\File;
+use Drupal\Core\Url;
+
 
 /**
  * Provides a 'Event Block' Block.
@@ -56,7 +58,9 @@ class EventBlock extends BlockBase {
 			}
 			
 			$items[$key]['image_url'] = $event_image_url;
-			$items[$key]['node_link'] = \Drupal::service('path_alias.manager')->getAliasByPath('/node/'.$nid);
+
+			$base_path = Url::fromRoute('<front>', [], ['absolute' => TRUE])->toString();
+			$items[$key]['node_link'] = $base_path . 'node/' . $nid;
 		}
 
 	    return [
