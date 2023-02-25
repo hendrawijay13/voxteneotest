@@ -1,0 +1,11 @@
+name: Vox Teneo
+type: theme
+description: Vox Teneo Custom Theme
+core_version_requirement: ^9
+base theme: classy
+
+libraries:
+- voxteneo/voxteneo-libraries
+
+regions:
+  content: Main Content

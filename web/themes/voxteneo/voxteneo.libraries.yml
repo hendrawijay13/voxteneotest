@@ -1,0 +1,6 @@
+voxteneo-libraries:
+  css:
+    theme:
+      assets/css/voxteneo.css: {}
+  js:
+    assets/js/voxteneo.js: {}
