@@ -24,3 +24,16 @@ function voxcustom_theme($existing, $type, $theme, $path): array {
 		],
 	];
 }
+
+function voxcustom_block_view_alter(array &$build, \Drupal\Core\Block\BlockPluginInterface $block) {
+	$current_node = \Drupal::routeMatch()->getParameter('node');
+
+	if (!empty($current_node)) {
+		if ($build['#id'] == 'relatedarticleblock') {
+			if ($current_node->getType() == "news") {
+				$build['#configuration']['label'] = 'Related News';		
+			} else if ($current_node->getType() == 'event')
+				$build['#configuration']['label'] = 'Related Event';		
+		}
+	}
+}

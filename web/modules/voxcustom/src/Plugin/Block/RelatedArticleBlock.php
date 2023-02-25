@@ -47,6 +47,7 @@ class RelatedArticleBlock extends BlockBase {
 			$nids = \Drupal::entityQuery('node')
 			    ->condition('type', 'event')
 			    ->condition('status', 1)
+			    ->condition('field_event_date.value', date("Y-m-d"), '>=')
 			    ->condition('field_category', $category , 'IN')
 			    ->condition('nid', $current_node->id() , '<>')
 			    ->range(0, 2)

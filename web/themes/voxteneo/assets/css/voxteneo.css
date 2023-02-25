@@ -112,6 +112,11 @@ img {
 	flex-wrap: wrap;
 }
 
+.home-card-wrapper,
+.main-node-wrapper {
+	margin-bottom: 30px;
+}
+
 .event-card-wrapper {
 	margin-left: -15px;
 }
@@ -197,6 +202,7 @@ img {
 }
 
 .node-details .field--name-field-publish-date,
+.node-details .field--name-field-event-date,
 .node-details .image-wrapper,
 .node-details p {
 	margin-top: 0;
@@ -214,4 +220,20 @@ img {
 
 .block-related-article-block h2 {
 	margin-top: 0;
+}
+
+.path-user .layout-container {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.path-user .layout-container > main {
+	position: relative;
+}
+
+.path-user .user-login-form input {
+	max-width: 250px;
 }
