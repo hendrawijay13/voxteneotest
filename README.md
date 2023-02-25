@@ -14,7 +14,7 @@ For "Event Description" field in event content type, I prefer to use (formatted,
 
 
 Step by step:
-1. Please setup local virtual host first to decrease link or image broken potential while testing
+1. Please setup local virtual host first to reduce link or image broken potential while testing
 2. Clone this repo to your local server
 3. Import database voxteneotest.sql to your local server
 4. After database imported, please navigate to /web/sites/default/settings.php and change database configuration
