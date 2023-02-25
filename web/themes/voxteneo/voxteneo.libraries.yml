@@ -1,6 +1,7 @@
 voxteneo-libraries:
   css:
     theme:
+      https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css: { type: external, minified: true }
       assets/css/voxteneo.css: {}
   js:
     assets/js/voxteneo.js: {}

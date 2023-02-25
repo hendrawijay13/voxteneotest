@@ -8,4 +8,6 @@ libraries:
 - voxteneo/voxteneo-libraries
 
 regions:
+  banner: Banner
   content: Main Content
+  homepage: Home Content

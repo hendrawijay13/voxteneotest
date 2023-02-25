@@ -1,0 +1,26 @@
+<?php
+
+use Drupal\node\Entity\Node;
+
+/**
+ * Implements hook_theme().
+ */
+function voxcustom_theme($existing, $type, $theme, $path): array {
+	return [
+		'event_block' => [
+	  		'variables' => [
+			    'items' => [],
+		  	],
+		],
+		'news_block' => [
+	  		'variables' => [
+			    'items' => [],
+		  	],
+		],
+		'related_article_block' => [
+	  		'variables' => [
+			    'items' => [],
+		  	],
+		],
+	];
+}

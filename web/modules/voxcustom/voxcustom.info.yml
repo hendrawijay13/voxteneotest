@@ -1,0 +1,7 @@
+name: Vox Custom Module 
+description: Custom module for news/event block
+package: Custom
+type: module
+version: 1.0
+core: 8.x
+core_version_requirement: ^8 || ^9

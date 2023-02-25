@@ -1,0 +1,16 @@
+<div class="event-card-wrapper">
+  {% for key,item in items %}
+    <div class="card-item">
+    	<div class="image-wrapper">
+    		<img src="{{ item.image_url }}" />
+    	</div>
+    	<div class="text-wrapper">
+    		<div class="date">{{ item.full_date }}</div>
+    		<div class="summary">
+    			{{ item.summary }}
+    		</div>
+    		<a class="btn" href="{{ item.node_link }}">Detail</a>
+    	</div>
+    </div>
+  {% endfor%}
+</div>
